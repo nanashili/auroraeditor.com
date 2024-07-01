@@ -22,8 +22,8 @@ function Socials() {
                     <div className="column large-3 medium-6 small-12">
                         <a href="https://twitter.com/Aurora_Editor" target="_blank" rel="noreferrer" className="block text-center">
                             <figure className="router-icon router-icon-twitter"></figure>
-                            <p><strong>Twitter</strong></p>
-                            <p className="typography-subbody">Discover the latest in <b>Aurora Editor</b> by following us on Twitter.</p>
+                            <p><strong>X (Twitter)</strong></p>
+                            <p className="typography-subbody">Discover the latest in <b>Aurora Editor</b> by following us on X.</p>
                         </a>
                     </div>
                     <div className="column large-3 medium-6 small-12">
@@ -35,9 +35,14 @@ function Socials() {
                     </div>
                     <div className="column large-3 medium-6 small-12">
                         <a href="https://www.producthunt.com/posts/aurora-editor?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-aurora&#0045;editor" target="_blank" rel="noreferrer" className="block text-center">
-                            <figure className="alt-router-icon">
-                                <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372771&theme=light" alt="AuroraEditor | Product Hunt" />
-                            </figure>
+                            <div className="social-link-content">
+                                <picture className="alt-router-icon">
+                                    <source className="center-image" srcset="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372771&theme=light" alt="AuroraEditor | Product Hunt" media="(prefers-color-scheme: light)" />
+                                    <source className="center-image" srcset="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372771&theme=dark" alt="AuroraEditor | Product Hunt" media="(prefers-color-scheme: dark)" />
+
+                                    <img className="center-image" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372771&theme=light" alt="AuroraEditor | Product Hunt" />
+                                </picture>
+                            </div>
                             <p><strong>Product Hunt</strong></p>
                             <p className="typography-subbody">Wanna support <b>Aurora Editor</b> on Product Hunt? Check out the Product Hunt page.</p>
                         </a>

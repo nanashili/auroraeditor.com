@@ -12,13 +12,15 @@ function auroranavUpdate() {
     String.prototype.basicPath = basicPath;
 
     // eslint-disable-next-line no-restricted-globals
-    var page = location.pathname.basicPath();
+    var page = "/" + (location.hash || "#/");
     var navItems = document.querySelectorAll('#auroranav .auroranav-menu-link');
 
     navItems.forEach(function (navItem) {
         if (navItem.href.basicPath() === page) {
             navItem.classList.add('current');
             navItem.setAttribute('aria-disabled', 'true');
+        } else {
+            navItem.classList.remove('current');
         }
 
         navItem.addEventListener("click", function (e) {
@@ -30,3 +32,14 @@ function auroranavUpdate() {
 
 auroranavUpdate();
 window.addEventListener('DOMContentLoaded', auroranavUpdate);
+
+// React on changed history state to update menu.
+(function() {
+    var previousState = window.history.state;
+    setInterval(function() {
+        if (previousState !== window.history.state) {
+            previousState = window.history.state;
+            auroranavUpdate();
+        }
+    }, 100);
+})();

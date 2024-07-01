@@ -24,6 +24,11 @@
     .contributors-generator.fixed-width .block {
         width: 216px;
     }
+    .social-link-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 251px;
+    }
 }
 
 @media only screen and (max-width: 735px) {
@@ -108,7 +113,7 @@
 }
 
 .router-icon-twitter {
-    background-image: url("../../elements/icons/socials/twitter.svg");
+    background-image: url("../../elements/icons/socials/twitter.png");
     transition: all 0.2s ease-in-out;
 }
 
@@ -185,7 +190,8 @@
 }
 
 .theme-dark .router-icon-twitter {
-    background-image: url("../../elements/icons/socials/twitter.svg");
+    background-image: url("../../elements/icons/socials/twitter-dark.png");
+    transition: all 0.2s ease-in-out;
 }
 
 .theme-dark .router-icon-github {
